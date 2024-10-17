@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="all.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <title>Hello, world!</title> -->
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Poppins, Montserrat !important
+            /* max-width: 100% !important; */
+
+    }
+
+    .color-theme {
+        color: rgb(255, 199, 106);
+
+    }
+
+    .bg-color-theme {
+        background-color: rgb(255, 199, 106);
+
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        border-bottom: 1px solid #363636;
+        background: #1f1f1ff7;
+        width: 100%;
+        margin: auto;
+        padding: 0 30px 0 15px;
+        height: 70px;
+    }
+
+    .header-logo {
+        color: rgb(255, 199, 106);
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .header-logo-span {
+        color: #fff;
+    }
+
+    .btn-header {
+        font-weight: 700;
+        font-size: 14px;
+        padding: 9px 25px;
+        height: 42px;
+        border-radius: 10px;
+        gap: 5px;
+        box-shadow: inset .4px 1px 4px hsla(0, 0%, 91%, .8);
+        outline: none;
+        display: flex;
+        text-align: center;
+        line-height: 23px;
+        margin-left: 10px;
+        /* margin-right: 10px; */
+    }
+
+    .btn-login {
+        display: block;
+        width: 190px;
+        font-weight: bolder;
+        margin-left: 20px;
+        margin-right: 10px;
+        margin-top: 0;
+    }
+
+    .btn-chat-header {
+        min-width: 45px !important;
+        max-height: 40px;
+        border-radius: 5px;
+        background-color: #353535;
+        padding: 4px 8px;
+        aspect-ratio: 1 / 1;
+        margin-left: 5px;
+        border: 1px solid #363636;
+        outline: none;
+
+    }
+
+    .btn-quest-header {
+        border: 1px solid #ffc76a;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        outline: none;
+        /* margin-right: 10px; */
+
+    }
+
+    .btn-quest-header:hover {
+        background-color: rgb(255, 199, 106);
+    }
+
+    .btn-quest-header:hover img {
+        filter: brightness(0) invert(0);
+    }
+
+
+    .btn-chat-header:focus img,
+    .btn-chat-header:active img {
+        fill: #999999;
+    }
+
+    .btn-header:hover {
+        background: #f8b446;
+    }
+
+    .header-mobile {
+        cursor: pointer;
+        position: fixed;
+        height: 60px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid hsla(0, 0%, 53%, .349);
+        /* Đổ bóng cho menu */
+        z-index: 1000;
+        font-weight: bolder;
+        display: none;
+    }
+
+    .header-mobile-item:hover {
+        background-color: #242424;
+    }
+
+    @media only screen and (max-width: 830px) {
+        .btn-header {
+            display: none;
+        }
+
+        .btn-login {
+            display: block;
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        .btn-chat-header{
+            display: none;
+        }
+        .header{
+            height: 60px;
+        }
+
+        .btn-header{
+            font-size: 12px;
+            height: 39px;
+            padding: 5px 25px;
+            line-height: 27px;
+        }
+
+        .btn-login{
+            width: 170px !important;
+            height: 37px !important;
+            margin-top: 1px;
+            line-height: 25px;
+            margin-left: 30px;
+            font-size: 13px;
+        }
+        .header-mobile{
+            display: block;
+        }
+
+        .header-logo-mob{
+            max-height: 50px;
+            max-width: 100%;
+            width: 50px;
+            --aspect-ratio-value: 16 / 9;
+            height: 60px;
+        }
+
+        .btn-quest-header{
+            width: 35px;
+            height: 35px;
+            margin-top: 2px;
+        }
+        .btn-header img{
+            width: 12px;
+        }
+    }
+
+    @media only screen and (max-width: 960px) {
+       .header{
+            padding-right: 0;
+       }
+    }
+
+    .header-mobile-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 7px;
+        font-weight: 600;
+        font-size: 11px;
+        font-family: Poppins;
+        flex: 1 1;
+        height: 100%;
+        cursor: pointer;
+        transition: background-color .3s ease-in-out;
+        padding-top: 9px;
+        padding-bottom: 10px;
+    }
+    .menu-bar-header{
+        height: calc(100vh - 60px);
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        background-color: #242424;
+        /* background: red; */
+        width: 220px;
+        padding: 10px;
+        overflow: hidden;
+
+        position: fixed;
+        display: none;
+
+    }
+
+    .menu-bar-item{
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 10px;
+        gap: 7px;
+        cursor: pointer;
+        max-height: 38px;
+        color: #cbc8c8;
+        fill: #cbc8c8;
+    }
+    .menu-bar-item i{
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        padding: 10px;
+        gap: 7px;
+        cursor: pointer;
+        max-height: 38px;
+      color: white;
+    }
+    .menu-bar-item a{
+        text-decoration: none;
+        color: #cbc8c8;
+        fill: #cbc8c8;
+        font-weight: 600;
+        font-family: Poppins;
+        font-size: 13.5px;
+        white-space: nowrap;
+    }
+
+    .menu-bar-selected a{
+        color: #ffc76a;
+        fill: #ffc76a !important;
+        /* background-color: #ffc66a4d; */
+    }
+    .menu-bar-selected{
+        background-color: #ffc66a4d;
+        
+    }
+    .menu-bar-bg-dark{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .623);
+        z-index: 998;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .menu-bar-item a:hover{
+        color: #ffc76a;
+        fill: #ffc76a !important;
+    }
+    
+</style>
+
+<body>
+    <header>
+        <div class="header bg-dark d-flex justify-content-between align-items-center">
+            <div class="text-white d-flex align-items-center">
+                <img src="https://cashblox.gg/_next/image?url=%2Flogoicon.png&w=128&q=75" alt="Logo" class="h-10 me-2 d-block d-md-none header-logo-mob" style="height: 40px;">
+                <span class="d-none d-md-block header-logo">
+                    Cash<span class="header-logo-span">Blox</span>
+                </span>
+            </div>
+            <nav>
+                <ul class="d-flex list-unstyled mb-0">
+                    <li>
+                        <button class="btn btn-quest-header">
+                            <img class="align-items-center" width="23" src="question-mark-draw-svgrepo-com.svg" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-header bg-color-theme">
+                            <img class="align-items-center" width="15" src="shopping-cart-svgrepo-com.svg" alt="">
+                            <span>Buy Robux</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-header bg-color-theme">
+                            <img class="align-items-center" width="15" src="credit-card-svgrepo-com.svg" alt="">
+                            <span>Withdraw</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-header bg-color-theme btn-login">
+                            Log in
+                        </a>
+                    </li>
+                    <li>
+                        <button class="btn btn-chat-header">
+                            <svg stroke="currentColor" fill="#ffc76a" stroke-width="0" viewBox="0 0 24 24" height="24" width="24" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"></path></svg>                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-mobile ">
+            <div class="d-flex">
+                <div class="col-3 header-mobile-item show-menu-header-mob">
+                    <div class="row justify-content-center align-items-center p-2 ">
+
+                        <svg stroke="currentColor" fill="#FFC76A" stroke-width="0" viewBox="0 0 1024 1024" height="22"
+                            width="22" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z">
+                            </path>
+                        </svg>
+
+                    </div>
+
+                </div>
+                <div class="col-3 header-mobile-item">
+                    <div class="row align-items-center justify-content-center">
+                        <svg stroke="currentColor" fill="#FFC76A" stroke-width="0" viewBox="0 0 1024 1024" height="20"
+                            width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z">
+                            </path>
+                        </svg>
+                    </div>
+                    
+                        Home
+                   
+                </div>
+                <div class="col-3 header-mobile-item">
+                    <div class="row align-items-center justify-content-center">
+                        <svg stroke="currentColor" fill="#FFC76A" stroke-width="0" viewBox="0 0 576 512" height="20"
+                            width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                            </path>
+                        </svg>
+                    </div>
+                    
+                        Store
+                    
+                </div>
+                <div class="col-3 header-mobile-item">
+                    <div class="row align-items-center justify-content-center">
+                        <svg stroke="currentColor" fill="#FFC76A" stroke-width="0" viewBox="0 0 16 16" height="20"
+                            width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z">
+                            </path>
+                        </svg>
+                    </div>
+                    
+                        Chat
+                    
+                </div>
+            </div>
+        </div>
+        <div class="menu-bar-bg-dark">
+
+        </div>
+        <div class="menu-bar-header">
+            <div class="menu-bar-item menu-bar-selected">
+                <a href="">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"></path></svg>
+                    Home
+                </a>
+               
+            </div>
+            <div class="menu-bar-item menu-bar-item-drop">
+                    <div class="d-flex justify-content-between align-items-center w-100">
+                        <div>
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="18" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M946.5 505L534.6 93.4a31.93 31.93 0 0 0-45.2 0L77.5 505c-12 12-18.8 28.3-18.8 45.3 0 35.3 28.7 64 64 64h43.4V908c0 17.7 14.3 32 32 32H448V716h112v224h265.9c17.7 0 32-14.3 32-32V614.3h43.4c17 0 33.3-6.7 45.3-18.8 24.9-25 24.9-65.5-.1-90.5z"></path></svg>
+                        Home
+                        </div>
+                        
+                      
+                        <svg class="drop-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style=""><path d="M128 192l128 128 128-128z"></path></svg>
+                    </div>
+                   
+              
+               
+            </div>
+           
+        </div>
+    </header>
+    <main style="height: 100px; background: black;">
+
+    </main>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+        <script>
+            $('#dropdownMenuButton').on('shown.bs.dropdown', function () {
+    $('#dropdownIcon').removeClass('bi-chevron-down').addClass('bi-chevron-up');
+});
+
+$('#dropdownMenuButton').on('hidden.bs.dropdown', function () {
+    $('#dropdownIcon').removeClass('bi-chevron-up').addClass('bi-chevron-down');
+});
+
+$('.menu-bar-item-drop').click(function() {
+    // Kiểm tra nếu phần tử có class 'active'
+    if ($(this).hasClass('active')) {
+        // Nếu đã có class 'active', xóa class và xóa style
+        $(this).removeClass('active');
+        $(this).find('.drop-icon').removeAttr('style');
+        $('.menu-bar-item-drop').removeAttr('style');
+    } else {
+        // Xóa class 'active' từ tất cả các menu item khác và xóa transform của các icon
+        $('.menu-bar-item-drop').removeClass('active');
+        $('.drop-icon').removeAttr('style');
+        
+        // Thêm class 'active' vào phần tử được nhấp
+        $(this).addClass('active');
+        
+        // Thêm style vào icon của mục được nhấp
+        $(this).find('.drop-icon').attr('style', 'transform: rotate(180deg) scaleX(-1);fill: #fff !important;');
+        $('.menu-bar-item-drop').attr('style', 'color: #ffc76a; fill: #ffc76a;');
+    }
+});
+$(document).ready(function() {
+    // Khi nhấp vào show-menu-header-mob
+    $('.show-menu-header-mob').click(function(event) {
+        event.stopPropagation(); // Ngăn chặn hành vi mặc định của sự kiện click
+        
+        // Kiểm tra nếu cả menu-bar-header và menu-bar-bg-dark đang ẩn
+        if ($('.menu-bar-header').is(':hidden') && $('.menu-bar-bg-dark').is(':hidden')) {
+            // Hiển thị cả menu-bar-header và menu-bar-bg-dark
+            $('.menu-bar-header, .menu-bar-bg-dark').removeClass('d-none').css('display', 'block');
+        } else {
+            // Ẩn cả menu-bar-header và menu-bar-bg-dark
+            $('.menu-bar-header, .menu-bar-bg-dark').addClass('d-none').css('display', 'none'); // Ẩn menu
+        }
+    });
+
+    // Khi nhấp vào menu-bar-header
+    $('.menu-bar-header').click(function(event) {
+        event.stopPropagation(); // Ngăn chặn hành vi mặc định của sự kiện click
+    });
+
+    // Khi nhấp bên ngoài menu-bar-header
+    $(document).click(function() {
+        // Ẩn cả menu-bar-header và menu-bar-bg-dark
+        $('.menu-bar-header, .menu-bar-bg-dark').addClass('d-none').css('display', 'none'); // Ẩn menu
+    });
+});
+
+        </script>
+</body>
+
+</html>
