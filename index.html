@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="all.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <title>Hello, world!</title> -->
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Poppins, Montserrat !important
+            /* max-width: 100% !important; */
+
+    }
+
+    .color-theme {
+        color: rgb(255, 199, 106);
+
+    }
+
+    .bg-color-theme {
+        background-color: rgb(255, 199, 106);
+
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        border-bottom: 1px solid #363636;
+        background: #1f1f1ff7;
+        width: 100%;
+        margin: auto;
+        padding: 0 30px 0 15px;
+        height: 70px;
+    }
+
+    .header-logo {
+        color: rgb(255, 199, 106);
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .header-logo-span {
+        color: #fff;
+    }
+
+    .btn-header {
+        font-size: 12px;
+        font-weight: bolder;
+        padding: 9px 25px;
+        /* padding-right: 30px; */
+        /* padding-left: 30px; */
+        border-radius: 10px;
+        gap: 5px;
+        box-shadow: inset .4px 1px 4px hsla(0, 0%, 91%, .8);
+        outline: none;
+        display: flex;
+        text-align: center;
+    }
+
+    .btn-login {
+        width: 190px;
+        display: block;
+        font-weight: bolder;
+    }
+
+    .btn-chat-header {
+        min-width: 45px !important;
+        max-height: 40px;
+        border-radius: 5px;
+        background-color: #353535;
+        padding: 4px 8px;
+        aspect-ratio: 1 / 1;
+        margin-left: 5px;
+        border: 1px solid #363636;
+        outline: none;
+
+    }
+
+    .btn-quest-header {
+        border: 1px solid #ffc76a;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        outline: none;
+
+
+    }
+
+    .btn-quest-header:hover {
+        background-color: rgb(255, 199, 106);
+    }
+
+    .btn-quest-header:hover img {
+        filter: brightness(0) invert(0);
+        /* background-color: rgb(255, 199, 106); */
+    }
+
+    .btn-chat-header:focus img,
+    .btn-chat-header:active img {
+        filter: brightness(0) saturate(100%) invert(61%) sepia(4%) saturate(0%) hue-rotate(308deg) brightness(94%) contrast(90%);
+    }
+
+    .btn-header:hover {
+        background: #f8b446;
+    }
+
+    .header-mobile {
+        cursor: pointer;
+        position: fixed;
+        /* Cố định ở dưới cùng */
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        /* Màu nền của menu */
+        color: white;
+        /* Màu chữ */
+        display: flex;
+        /* Sử dụng Flexbox để căn giữa */
+        justify-content: space-around;
+        /* Căn đều các mục */
+        /* padding: 10px 0; */
+        /* Khoảng cách trên và dưới */
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+        /* Đổ bóng cho menu */
+        z-index: 1000;
+        font-weight: bolder;
+    }
+
+    .header-mobile-item:hover {
+        /* filter: brightness(0) saturate(100%) invert(75%) sepia(76%) saturate(412%) hue-rotate(356deg) brightness(102%) contrast(101%); */
+        background-color: #242424;
+    }
+
+    @media only screen and (max-width: 830px) {
+        .btn-header {
+            display: none;
+        }
+
+        .btn-login {
+            display: block;
+            /* text-align: center; */
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="header bg-dark d-flex justify-content-between align-items-center">
+            <div class="text-white d-flex align-items-center">
+                <img src="logo.png" alt="Logo" class="h-10 me-2 d-block d-md-none" style="height: 40px;">
+                <span class="d-none d-md-block header-logo">
+                    Cash<span class="header-logo-span">Blox</span>
+                </span>
+            </div>
+            <nav>
+                <ul class="d-flex list-unstyled mb-0">
+                    <li>
+                        <button class="btn btn-quest-header me-2">
+                            <img class="align-items-center" width="23" src="question-mark-draw-svgrepo-com.svg" alt="">
+                        </button>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-header bg-color-theme me-2">
+                            <img class="align-items-center" width="15" src="shopping-cart-svgrepo-com.svg" alt="">
+                            <span>Buy Robux</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-header bg-color-theme me-3">
+                            <img class="align-items-center" width="15" src="credit-card-svgrepo-com.svg" alt="">
+                            <span>Withdraw</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-header bg-color-theme btn-login ms-1 me-2">
+                            Log in
+                        </a>
+                    </li>
+                    <li>
+                        <button class="btn btn-chat-header d-none d-lg-block">
+                            <img width="20" src="message-of-filled-rectangular-speech-bubble-svgrepo-com.svg" alt="">
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-mobile d-block d-lg-none">
+            <div class="row w-100">
+                <div class="col-3 header-mobile-item p-2 d-flex align-items-center justify-content-center">
+                    <img width="20" src="menu-svgrepo-com.svg" alt="">
+                </div>
+                <div class="col-3 header-mobile-item p-2">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img width="20" src="home-svgrepo-com.svg" alt="">
+                    </div>
+                    <div class="col-12 text-center">
+                        Home
+                    </div>
+                </div>
+                <div class="col-3 header-mobile-item p-2">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img width="20" class="" src="cart-alt-1-svgrepo-com.svg" alt="">
+                    </div>
+                    <div class="col-12 text-center">
+                        Store
+                    </div>
+                </div>
+                <div class="col-3 header-mobile-item p-2">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img width="20" class="" src="message-of-filled-rectangular-speech-bubble-svgrepo-com.svg" alt="">
+                    </div>
+                    <div class="col-12 text-center">
+                        Chat
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
