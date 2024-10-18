@@ -1,0 +1,13 @@
+:root{
+    --bg-btn: rgb(255, 199, 106);
+    --bg-theme: #141414;
+    --bg-menu-bar: #242424;
+    --bg-item-menu: #665539;
+    --bg-text-menu: #cbc8c8;
+    --color-icon-non-active: #cbc8c8;
+    --bg-disable: #e9ecef;
+    --color-text-active: rgb(255, 199, 106);
+    --color-text: #999;
+    --bg-hover-icon: #1e1e1e8a;
+    --bg-text-title: #fff;
+}

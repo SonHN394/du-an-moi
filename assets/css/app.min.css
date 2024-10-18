@@ -458,7 +458,7 @@
     }
 }
 
-.footer {
+/* .footer {
     bottom: 0;
     padding: 20px calc(1.5rem * .5);
     position: absolute;
@@ -467,7 +467,7 @@
     left: var(--vz-vertical-menu-width);
     height: 60px;
     background-color: var(--vz-footer-bg)
-}
+} */
 
 @media (max-width: 991.98px) {
     .footer {
