@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none" data-bs-theme="dark" data-body-image="img-1" data-preloader="disable">
 
 <head>
     <!-- Required meta tags -->
@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="all.css">
 
+    <!-- Bootstrap Css -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <!-- <title>Hello, world!</title> -->
     <script src="/assets/js/jquery.min.js"></script>
     <style>
@@ -76,11 +78,10 @@
 
     <!-- jsvectormap css -->
     <link href="/assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/config-color.css" rel="stylesheet" type="text/css" />
 
     <!-- Layout config Js -->
     <script src="/assets/js/layout.js"></script>
-    <!-- Bootstrap Css -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Icons Css -->
     <link href="/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <!-- App Css-->
@@ -517,7 +518,6 @@
         background: #141414;
     }
 </style>
-
 <body>
     <header>
         <div class="header bg-dark d-flex justify-content-between align-items-center">
@@ -775,160 +775,175 @@
     <main>
         <!-- <div class=""></div> -->
         <div class="main-content main">
-            <div class="page-content">
+                <div class="page-content" style="padding-top: 20px;">
 
 
-                <script src="/assets/js/jquery.min.js"></script>
-                <style>
-                    .hh {
-                        font-size: 12px;
+                                 <script src="/assets/js/jquery.min.js"></script>
+  <style>
+ 
+        .hh{
+                font-size: 12px;
 
-                    }
+        }
+        th {
+    position: sticky;
+    top: 0;
+}
 
-                    th {
-                        position: sticky;
-                        top: 0;
-                    }
+.table>thead {
+    position: sticky;
+    top: 0;
+    background-color: #1f2934;
+}
+.dataTables_wrapper {
+    position: relative;
+    height: 500px;
+}
+.dataTables_wrapper {
+    width: 103%;
+    position: relative;
+    height: 500px;
+}
+th {
+    color: white !important;
+}
 
-                    .table>thead {
-                        position: sticky;
-                        top: 0;
-                        background-color: #1f2934;
-                    }
+[data-bs-theme=light] .bg-dark {
+    background-color: white !important;
+    color: black !important;
+}
+.ffff{
 
-                    .dataTables_wrapper {
-                        position: relative;
-                        height: 500px;
-                    }
+    min-height:200px;
+}
+[data-bs-theme=light] .text-primary {
+    color: black !important;
+    font-weight: 500;
+}
 
-                    .dataTables_wrapper {
-                        width: 103%;
-                        position: relative;
-                        height: 500px;
-                    }
+[data-bs-theme=light] .table>thead {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    color:black;
+}
+[data-bs-theme=light] th {
 
-                    th {
-                        color: white !important;
-                    }
+    color: black !important;
+}
 
-                    [data-bs-theme=light] .bg-dark {
-                        background-color: white !important;
-                        color: black !important;
-                    }
 
-                    .ffff {
+</style>
 
-                        min-height: 200px;
-                    }
+<div class="container-fluid">
 
-                    [data-bs-theme=light] .text-primary {
-                        color: black !important;
-                        font-weight: 500;
-                    }
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-transparent">
+                        <h4 class="mb-sm-0">Trang Chủ</h4>
 
-                    [data-bs-theme=light] .table>thead {
-                        position: sticky;
-                        top: 0;
-                        background-color: white;
-                        color: black;
-                    }
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Sellrobux.com</a></li>
+                                <li class="breadcrumb-item active">Trang Chủ</li>
+                            </ol>
+                        </div>
 
-                    [data-bs-theme=light] th {
-
-                        color: black !important;
-                    }
-                </style>
-
-                <div class="container-fluid">
+                    </div>
                 </div>
-                <div class="row">
-                </div>
+            </div>
+            <div class="row">
+<!-- <div class="card bg-dark" style="padding:10px">
+<marquee class="tw-w-full" scrollamount="2">
+    <div class="mar text-primary">
+        Cập nhật mua gamepass 120h, Khách hàng chỉ việc oder lém link và chờ hoàn thành đơn, Mời Quý Khách Trải Nghiệm Dịch Vụ ...                </div>
+    </div>
+</marquee>
+</div> -->
+</div>
 
-                <style>
-                    .count-circle {
-                        position: relative;
-                        display: inline-block;
-                        margin-bottom: 22px;
 
-                    }
+            <!-- end page title -->
 
-                    .btn-dark {
-                        background-color: black !important;
-                        color: white !important;
-                    }
+<style>
+.count-circle {
+position: relative;
+display: inline-block;
+  margin-bottom: 22px;
 
-                    .btn-danger {
-                        background-color: #d15858 !important;
-                        color: white !important;
-                    }
+}
 
-                    /* .bg-dark {
+.btn-dark {
+background-color: black !important;
+color: white !important;
+}
+.btn-danger{
+background-color: #d15858 !important;
+color: white !important;
+}
+.bg-dark {
 --vz-bg-opacity: 1;
 background-color : var(--vz-vertical-menu-bg) !important;
-} */
-                    .table-light11 {
-                        background-color: var(--vz-vertical-menu-bg);
-                    }
+}
+.table-light11{
+background-color : var(--vz-vertical-menu-bg);
+}
+.btn-warning {
+color: white !important;
+background-color: #ffc107 !important;
+border-color: #ffc107;
+}
 
-                    .btn-warning {
-                        color: white !important;
-                        background-color: #ffc107 !important;
-                        border-color: #ffc107;
-                    }
-
-                    .btn-warning {
-                        color: white !important;
-                        background-color: #ffc107 !important;
-                        border-color: #ffc107;
-                    }
-
-                    .btn-info {
-                        color: white !important;
-                        background-color: #36b9cc !important;
-                        border-color: #36b9cc;
+.btn-warning {
+color: white !important;
+background-color: #ffc107 !important;
+border-color: #ffc107;
+}
+.btn-info{
+    color: white !important;
+background-color: #36b9cc !important;
+border-color: #36b9cc;
 
 
-                    }
-
-                    .btn-light {
-                        color: black !important;
-                        background-color: #f8f9fc !important;
-                        border-color: #f8f9fc !important;
-
-
-                    }
-
-                    .btn-secondary {
-                        color: white !important;
-                        background-color: #7b8190 !important;
-                        border-color: #7b8190 !important;
+}
+.btn-light{
+    color: black !important;
+background-color: #f8f9fc  !important;
+border-color: #f8f9fc  !important;
 
 
-                    }
+}
+.btn-secondary{
+    color: white !important;
+background-color: #7b8190  !important;
+border-color: #7b8190  !important;
 
-                    .count-circle .badge {
-                        position: absolute;
-                        top: -10px;
-                        right: -10px;
-                        padding: 5px 10px;
-                        border-radius: 50%;
-                        background-color: red;
-                        color: white;
-                    }
-                </style>
 
-                <!-- danh sách dịch vụ -->
-                <!-- 
+}
+.count-circle .badge {
+position: absolute;
+top: -10px;
+right: -10px;
+padding: 5px 10px;
+border-radius: 50%;
+background-color: red;
+color: white;
+}
+</style>
+
+<!-- danh sách dịch vụ -->
+<!-- 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6nARxrcic0s?si=bt1uycicBbb1kPY0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 <div class="row">
 <div class="col-lg-12">
 <div class="card">
-<div class="card-header">
-    <h5 class="card-title mb-0">DANH SÁCH ĐỐI TÁC</h5>
-</div>
-<div class="card-body">
+    <div class="card-header">
+        <h5 class="card-title mb-0">DANH SÁCH ĐỐI TÁC</h5>
+    </div>
+    <div class="card-body">
 <br />
 <div class="count-circle">
 <button class="btn btn-dark buuu" data-rate="120">
@@ -966,53 +981,53 @@ color: green;
 <script type="text/javascript" defer="defer">
 $(function() {
 var fakeData = [
-{ id: 1, rate: "120 / 4.78$", time: "200 Phút", action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>' },
-{ id: 2, rate: "105 / 4.18$", time: "60 Phút", action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>' },
-{ id: 3, rate: "102 / 4.06$", time: "5 Phút", action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>' },
-{ id: 4, rate: "100 / 3.98$", time: "100 Phút", action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>' }
+    { id: 1, rate: "120 / 4.78$", time: "200 Phút", action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>' },
+    { id: 2, rate: "105 / 4.18$", time: "60 Phút", action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>' },
+    { id: 3, rate: "102 / 4.06$", time: "5 Phút", action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>' },
+    { id: 4, rate: "100 / 3.98$", time: "100 Phút", action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>' }
 ];
 
 erTable_dt_authors = $("#dt_authors").DataTable({
-processing: true,
-serverSide: false, // Không cần server-side khi sử dụng dữ liệu giả
-searchDelay: 500,
-autoWidth: false,
-searching: true,
-order: [[1, "desc"]],
-dom: "Bfrtip",
-buttons: ['pageLength'],
-lengthMenu: [50, 75, 100],
+    processing: true,
+    serverSide: false, // Không cần server-side khi sử dụng dữ liệu giả
+    searchDelay: 500,
+    autoWidth: false,
+    searching: true,
+    order: [[1, "desc"]],
+    dom: "Bfrtip",
+    buttons: ['pageLength'],
+    lengthMenu: [50, 75, 100],
 
-data: fakeData,
+    data: fakeData,
 
-columns: [
-    { data: 'id', title: 'ID' },
-    { data: 'rate', title: 'Rate' },
-    { data: 'time', title: 'Thời Gian Xong' },
-    { data: 'action', title: 'THAO TÁC' }
-]
+    columns: [
+        { data: 'id', title: 'ID' },
+        { data: 'rate', title: 'Rate' },
+        { data: 'time', title: 'Thời Gian Xong' },
+        { data: 'action', title: 'THAO TÁC' }
+    ]
 });
 });
 function search() {
 var searchValue = $("#acc_name").val();
 $.fn.dataTable.ext.search = [];
 $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
-var rateColumn = data[1];
-var numberMatch = rateColumn.match(/^\d+/);
+    var rateColumn = data[1];
+    var numberMatch = rateColumn.match(/^\d+/);
 
-if (numberMatch) {
-    var rateValue = numberMatch[0];
-    return rateValue == searchValue;
-}
-return false;
+    if (numberMatch) {
+        var rateValue = numberMatch[0];
+        return rateValue == searchValue;
+    }
+    return false;
 });
 erTable_dt_authors.draw();
 }
 $(document).ready(function(){
 $('.buuu').click(function(){
-var rate = $(this).data('rate');
-$('input[name="abc"]').val(rate);
-search();
+    var rate = $(this).data('rate');
+    $('input[name="abc"]').val(rate);
+    search();
 
 });
 });
@@ -1021,189 +1036,358 @@ search();
 
 </div>
 </div>
-</div>
+    </div>
 </div> -->
 
-                <!-- mua dịch vụ -->
-                <div class="row">
+<!-- mua dịch vụ -->
+<!-- <div class="row">
+<div class="col-md-4">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <nav class="mb-3">
 
 
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text">Người làm</label>
+                      </div>
+                        <input type="text" class="form-control" value="#5" disabled="">
 
-                    <div class="col-md-4">
-                        <!-- DataTales Example -->
-                        <div class="card shadow mb-4">
-                            <div class="card-body">
-                                <nav class="mb-3">
-
-
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text">Người làm</label>
-                                        </div>
-                                        <input type="text" class="form-control" value="#5" disabled="">
-
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text">Rate</label>
-                                        </div>
-                                        <input type="text" class="form-control" value="120 R$" disabled="">
-
-                                    </div>
-
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text">Đơn tối thiểu</label>
-                                        </div>
-                                        <input type="text" class="form-control" value="100 - 1000000 R$" disabled="">
-
-                                    </div>
-
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text">Thời gian xong đơn</label>
-                                        </div>
-                                        <input type="text" class="form-control" value="200 Phút" disabled="">
-
-                                    </div>
-
-
-
-
-
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text">Link GamePass/Svvip</label>
-                                        </div>
-                                        <input type="text" name="taikhoan" id="taikhoan" class="form-control"
-                                            required="required" placeholder="Nhập link gamepass/svvip">
-
-                                    </div>
-
-
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text">Số Robux</label>
-                                        </div>
-                                        <input type="text" name="robux" id="robux" class="form-control"
-                                            required="required" pattern="[A-Za-z0-9]{1,20}" placeholder="R$">
-
-                                    </div>
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text">Thành tiền</label>
-                                        </div>
-                                        <input type="text" name="thanhtien" id="thanhtien" class="form-control"
-                                            disabled="">
-
-                                    </div>
-                                    <span id="response_crypto"></span>
-                                    <button type="button" class="btn btn-primary btn-lg btn-block" id="topup_crypto">Tạo
-                                        đơn hàng</button>
-
-
-                                </nav>
-                            </div>
-
-
-
-
-
-
-
-
-
-                        </div>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title mb-0">Danh sách đơn</h5>
-                            </div>
-                            <div class="card-body">
-
-
-                                <div class="table-responsive">
-                                    <div id="dt_gamepass_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                                        <table id="dt_gamepass" class="table text-md-nowrap dataTable no-footer"
-                                            role="grid" aria-describedby="dt_gamepass_info">
-                                            <thead>
-                                                <tr role="row">
-                                                    <th>ID</th>
-                                                    <th>Link GamePass</th>
-                                                    <th>Rate Robux</th>
-                                                    <th>Số Robux</th>
-                                                    <th>Thành Tiền</th>
-                                                    <th>Ngày</th>
-                                                    <th>Ghi chú</th>
-                                                    <th>Trạng Thái</th>
-                                                    <th>THAO TÁC</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody></tbody>
-                                        </table>
-                                    </div>
-                                </div>
-
-                                <script type="text/javascript" defer="defer">
-                                    $(function () {
-                                        // Dữ liệu giả
-                                        var fakeData = [
-                                            {
-                                                id: 1,
-                                                link: "<a href='#'>GamePass 1</a>",
-                                                rate: "120 / 4.78$",
-                                                soRobux: "120",
-                                                thanhTien: "4.78$",
-                                                ngay: "2024-10-18",
-                                                ghiChu: "Hoàn tất",
-                                                trangThai: "Đã xong",
-                                                action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>'
-                                            },
-                                            {
-                                                id: 2,
-                                                link: "<a href='#'>GamePass 2</a>",
-                                                rate: "105 / 4.18$",
-                                                soRobux: "105",
-                                                thanhTien: "4.18$",
-                                                ngay: "2024-10-17",
-                                                ghiChu: "Chờ xử lý",
-                                                trangThai: "Đang chờ",
-                                                action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>'
-                                            }
-                                        ];
-                                        erTable_dt_gamepass = $("#dt_gamepass").DataTable({
-                                            processing: true,
-                                            serverSide: false, // Không cần server-side khi sử dụng dữ liệu giả
-                                            searchDelay: 500,
-                                            autoWidth: false,
-                                            searching: true,
-                                            order: [[0, "desc"]],
-                                            lengthMenu: [10, 25, 50, 75, 100],
-                                            data: fakeData,
-                                            columns: [
-                                                { data: 'id', title: 'ID' },
-                                                { data: 'link', title: 'Link GamePass' },
-                                                { data: 'rate', title: 'Rate Robux' },
-                                                { data: 'soRobux', title: 'Số Robux' },
-                                                { data: 'thanhTien', title: 'Thành Tiền' },
-                                                { data: 'ngay', title: 'Ngày' },
-                                                { data: 'ghiChu', title: 'Ghi chú' },
-                                                { data: 'trangThai', title: 'Trạng Thái' },
-                                                { data: 'action', title: 'THAO TÁC' }
-                                            ]
-                                        });
-                                    });
-                                </script>
-
-                            </div>
-                        </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text">Rate</label>
+                      </div>
+                        <input type="text" class="form-control" value="120 R$" disabled="">
 
                     </div>
 
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text">Đơn tối thiểu</label>
+                      </div>
+                        <input type="text" class="form-control" value="100 - 1000000 R$" disabled="">
+
+                    </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text">Thời gian xong đơn</label>
+                      </div>
+                        <input type="text" class="form-control" value="200 Phút" disabled="">
+
+                    </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text">Link GamePass/Svvip</label>
+                      </div>
+                        <input type="text" name="taikhoan" id="taikhoan" class="form-control" required="required" placeholder="Nhập link gamepass/svvip">
+
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text">Số Robux</label>
+                      </div>
+                        <input type="text" name="robux" id="robux" class="form-control" required="required" pattern="[A-Za-z0-9]{1,20}" placeholder="R$">
+
+                    </div>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <label class="input-group-text">Thành tiền</label>
+                      </div>
+                        <input type="text" name="thanhtien" id="thanhtien" class="form-control" disabled="">
+                    </div>
+                    <span id="response_crypto"></span>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="topup_crypto">Tạo đơn hàng</button>
+                </nav></div>
+    </div>
+</div>
+<div class="col-md-8">
+<div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Danh sách đơn</h5>
                 </div>
-            </div>
+                <div class="card-body">
 
+
+                    <div class="table-responsive">
+                        <div id="dt_gamepass_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                            <table id="dt_gamepass" class="table text-md-nowrap dataTable no-footer" role="grid" aria-describedby="dt_gamepass_info">
+                                <thead>
+                                    <tr role="row">
+                                        <th>ID</th>
+                                        <th>Link GamePass</th>
+                                        <th>Rate Robux</th>
+                                        <th>Số Robux</th>
+                                        <th>Thành Tiền</th>
+                                        <th>Ngày</th>
+                                        <th>Ghi chú</th>
+                                        <th>Trạng Thái</th>
+                                        <th>THAO TÁC</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript" defer="defer">
+                        $(function(){
+                            // Dữ liệu giả
+                            var fakeData = [
+                                {
+                                    id: 1,
+                                    link: "<a href='#'>GamePass 1</a>",
+                                    rate: "120 / 4.78$",
+                                    soRobux: "120",
+                                    thanhTien: "4.78$",
+                                    ngay: "2024-10-18",
+                                    ghiChu: "Hoàn tất",
+                                    trangThai: "Đã xong",
+                                    action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>'
+                                },
+                                {
+                                    id: 2,
+                                    link: "<a href='#'>GamePass 2</a>",
+                                    rate: "105 / 4.18$",
+                                    soRobux: "105",
+                                    thanhTien: "4.18$",
+                                    ngay: "2024-10-17",
+                                    ghiChu: "Chờ xử lý",
+                                    trangThai: "Đang chờ",
+                                    action: '<a class="btn btn-sm btn-primary" href="#"><i class="fas fa-shopping-cart"></i> Đặt hàng</a>' 
+                                }
+                            ];
+                            erTable_dt_gamepass = $("#dt_gamepass").DataTable({
+                                processing: true,
+                                serverSide: false, // Không cần server-side khi sử dụng dữ liệu giả
+                                searchDelay: 500,
+                                autoWidth: false,
+                                searching: true,
+                                order: [[0, "desc"]],
+                                lengthMenu: [10, 25, 50, 75, 100],
+                                data: fakeData,
+                                columns: [
+                                    { data: 'id', title: 'ID' },
+                                    { data: 'link', title: 'Link GamePass' },
+                                    { data: 'rate', title: 'Rate Robux' },
+                                    { data: 'soRobux', title: 'Số Robux' },
+                                    { data: 'thanhTien', title: 'Thành Tiền' },
+                                    { data: 'ngay', title: 'Ngày' },
+                                    { data: 'ghiChu', title: 'Ghi chú' },
+                                    { data: 'trangThai', title: 'Trạng Thái' },
+                                    { data: 'action', title: 'THAO TÁC' }
+                                ]
+                            });
+                        });
+                    </script>
+
+      </div>
+                     </div>
+
+</div>
+
+</div>
+
+        </div> -->
+
+
+<!-- mua nick -->
+ <div class="row">
+<div class="col-md-12">
+<div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Danh sách đơn</h5>
+                </div>
+                <div class="card-body">
+
+
+                    <div class="table-responsive">
+                        <div id="dt_gamepass_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                            <table id="dt_gamepass" class="table text-md-nowrap dataTable no-footer" role="grid" aria-describedby="dt_gamepass_info">
+                            </table>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript" defer="defer">
+                        $(function(){
+                            // Dữ liệu giả
+                            var fakeData = [
+                                {
+                                    id: 1,
+                                    soRobux: "120",
+                                    rate: "120 / 4.78$",
+                                    thanhTien: "4.78$",
+                                    baoHanh: "10 Phút",
+                                    action: '<button class="btn  btn-sm btn-success  js-account-buy" data-action="/getacc" data-id="1"> <i class="fas fa-shopping-cart"></i>Mua</button>'
+                                },
+                                {
+                                    id: 2,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="2"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 3,
+                                    soRobux: "100",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="3"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 4,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="4"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 5,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="5"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 6,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="6"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 7,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="7"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 8,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="8"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 9,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="9"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 10,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="10"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                            ];
+                            erTable_dt_gamepass = $("#dt_gamepass").DataTable({
+                                processing: true,
+                                serverSide: false, // Không cần server-side khi sử dụng dữ liệu giả
+                                searchDelay: 500,
+                                autoWidth: false,
+                                searching: true,
+                                order: [[0, "desc"]],
+                                lengthMenu: [10, 25, 50, 75, 100],
+                                data: fakeData,
+                                columns: [
+                                    { data: 'id', title: '#' },
+                                    { data: 'soRobux', title: 'ROBUX' },
+                                    { data: 'rate', title: 'RATE' },
+                                    { data: 'thanhTien', title: 'GIÁ' },
+                                    { data: 'baoHanh', title: 'ẢO HÀNH' },
+                                    { data: 'action', title: 'THAO TÁC' }
+                                ]
+                            });
+                        });
+                        var BaseCompAccount = function() {
+                            var n = function() {
+                                jQuery(document).on("click", ".js-account-buy", function() {
+                                    var n = jQuery(this);
+                                    swal({
+                                        title: "Xác nhận mua tài khoản #" + n.data("id"),
+                                        text: 'Sau khi mua xong có thể xem thông tin đăng nhập tại mục "Tài khoản đã mua", chắc chắn mua chứ?',
+                                        icon: "warning",
+                                        dangerMode: !0,
+                                        closeOnCancel: true,
+
+                                        buttons: {
+                                            cancel: "Hủy",
+                                            confirm: {
+                                                text: "Có, tôi muốn mua",
+                                                closeModal: !1
+                                            }
+                                        }
+                                    }).then(function(t) {
+                                        // if (t) {
+
+                                        //             jQuery.ajax({
+                                        //                 method: "POST",
+                                        //                 url: n.data("action"),
+                                        //     data: { id: n.data("id")},
+                                        //                 dataType: "json"
+                                        //             }).done(function(n) {
+
+                                        //     if(n.err == 0){
+                                        //         swal.close();
+                                        //         swal({
+                                        //             title: "Success",
+                                        //             text: n.msg,
+                                        //             icon: "success",
+                                        //             closeOnClickOutside: !1
+                                        //         });
+
+
+                                        //     } else {
+                                        //         swal({
+                                        //             title: "Error",
+                                        //             text: n.msg,
+                                        //             icon: "error",
+                                        //             closeOnClickOutside: !1
+                                        //         });
+
+                                        //     }
+
+                                        // }).fail(function(n, t, e) {
+                                        //     swal("Oops!", n.msg,"error")
+                                        // })
+                                        // }
+                                    })
+                                })
+                            };
+                            return {
+                                init: function() {
+                                    n()
+                                }
+                            }
+                        }();
+                        jQuery(function() {
+                            BaseCompAccount.init()
+                        });
+                    </script>
+
+      </div>
+                     </div>
+
+</div>
+
+</div>
+
+        </div>
     </main>
     <div class="menu-chat-header">
         <div class="menu-bar-item menu-bar-item-close">
