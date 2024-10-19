@@ -379,7 +379,7 @@
         position: fixed;
         right: 0;
         top: 70px;
-        /* display: none; */
+        display: block;
         transition: all 0.5s ease;
     }
 
@@ -519,6 +519,47 @@
     }
 </style>
 <body>
+   
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div> -->
+            <div class="modal-body p-0">
+            
+              <div class="row">
+              
+                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                   
+                    <form class="m-3 w-100">
+                        <h5 class="text-center">Login</h5>
+                        <div class="mb-3">
+                          <label for="username" class="form-label">Tài khoản</label>
+                          <input type="text" class="form-control w-100" id="username" placeholder="Nhập tài khoản" required>
+                        </div>
+                        <div class="mb-3">
+                          <label for="password" class="form-label">Mật khẩu</label>
+                          <input type="password" class="form-control w-100" id="password" placeholder="Nhập mật khẩu" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
+                      </form>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="Untitled.png" class="w-100" alt="">
+                </div>
+              </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
     <header>
         <div class="header bg-dark d-flex justify-content-between align-items-center">
             <div class="text-white d-flex align-items-center">
@@ -1695,6 +1736,11 @@ $('.buuu').click(function(){
             }
         });
         $(document).ready(function () {
+            $('.btn-login').click(function(e) {
+                e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+                $('#exampleModal').modal('show'); // Hiện modal
+            });
+
             $('.show-menu-header-mob').click(function (event) {
                 event.stopPropagation();
                 if ($('.menu-bar-header').is(':hidden') && $('.menu-bar-bg-dark').is(':hidden')) {
@@ -1773,11 +1819,21 @@ $('.buuu').click(function(){
                     $('.menu-bar-item-close svg').removeClass('me-1');
                     $('.menu-bar-item a').removeClass('p-1');
                     $('.menu-bar-header').css('width', '220px'); // Hoặc để chiều rộng về trạng thái ban đầu nếu cần
+                    $('.menu-chat-header').css('display', 'none'); // Hoặc để chiều rộng về trạng thái ban đầu nếu cần
                     $('.footer').css('margin-left', '0px')
+                    $('.footer').css('margin-right', '0px')
+                    $('.main').css('margin-right', '0px')
+                    $('.main').css('margin-left', '0px')
                 } else {
                     $('.footer').css('margin-left', '220px')
                     $('.main').css('margin-left', '220px')
+                    var menuChatHeader = $('.menu-chat-header');
 
+// Kiểm tra nếu thẻ menu-chat-header đang hiển thị (display khác 'none')
+                    if (menuChatHeader.css('display') !== 'none') {
+                        $('.footer').css('margin-right', '300px')
+                        $('.main').css('margin-right', '300px')
+                    }
                 }
             });
             $('.btn-chat-header').on('click', function (e) {
