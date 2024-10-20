@@ -380,7 +380,7 @@
         position: fixed;
         right: 0;
         top: 70px;
-        display: block;
+        /* display: block; */
         transition: all 0.5s ease;
     }
 
@@ -1762,9 +1762,10 @@ $('.buuu').click(function(){
 
             $('.show-menu-header-mob').click(function (event) {
                 event.stopPropagation();
-                if ($('.menu-bar-header').is(':hidden') && $('.menu-bar-bg-dark').is(':hidden')) {
-                    $('.menu-bar-header, .menu-bar-bg-dark').removeClass('d-none').css('display', 'block');
+                if ($('.menu-bar-header').is(':hidden')) {
                     $('.menu-chat-header').css('display', 'none');
+                    $('.menu-bar-header, .menu-bar-bg-dark').removeClass('d-none').css('display', 'block');
+                   
 
                 } else {
                     $('.menu-bar-header, .menu-bar-bg-dark').addClass('d-none').css('display', 'none'); // Ẩn menu
