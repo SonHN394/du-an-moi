@@ -885,6 +885,11 @@
 
                 <div class="container-fluid">
 
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-transparent">
+                        <h4 class="mb-sm-0">Home</h4>
                     <!-- start page title -->
                     <div class="row">
                         <div class="col-12">
@@ -892,6 +897,12 @@
                                 class="page-title-box d-sm-flex align-items-center justify-content-between bg-transparent">
                                 <h4 class="mb-sm-0">Trang Chủ</h4>
 
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Sellrobux.com</a></li>
+                                <li class="breadcrumb-item active">Home</li>
+                            </ol>
+                        </div>
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="javascript: void(0);">Sellrobux.com</a>
@@ -1250,6 +1261,35 @@ $('.buuu').click(function(){
         </div> -->
 
 
+<!-- mua nick -->
+ <div class="row">
+<div class="col-md-12">
+<div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">List of accounts</h5>
+                </div>
+                <div class="card-body">
+                    <br />
+                    <div class="count-circle">
+                    <button class="btn btn-dark buuu" data-rate="120">
+                    Rate 120    </button>
+                    <span class="badge"> 1</span>
+                    </div>
+                    <div class="count-circle">
+                    <button class="btn btn-primary buuu" data-rate="105">
+                    Rate 105    </button>
+                    <span class="badge"> 1</span>
+                    </div>
+                    <div class="count-circle">
+                    <button class="btn btn-secondary buuu" data-rate="102">
+                    Rate 102    </button>
+                    <span class="badge"> 1</span>
+                    </div>
+                    <div class="count-circle">
+                    <button class="btn btn-danger buuu" data-rate="100">
+                    Rate 100    </button>
+                    <span class="badge"> 1</span>
+                    </div>
                     <!-- mua nick -->
                     <div class="row">
                         <div class="col-md-12">
@@ -1260,6 +1300,13 @@ $('.buuu').click(function(){
                                 <div class="card-body">
 
 
+                    <div class="table-responsive">
+                        <div id="dt_gamepass_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                            <table id="dt_gamepass" class="table text-md-nowrap dataTable no-footer" role="grid" aria-describedby="dt_gamepass_info">
+                            </table>
+                        </div>
+                    </div>
+                    <input type="hidden" id="acc_name" name="search_acc">
                                     <div class="table-responsive">
                                         <div id="dt_gamepass_wrapper"
                                             class="dataTables_wrapper dt-bootstrap4 no-footer">
@@ -1269,6 +1316,120 @@ $('.buuu').click(function(){
                                         </div>
                                     </div>
 
+                    <script type="text/javascript" defer="defer">
+                        $(function(){
+                            // Dữ liệu giả
+                            var fakeData = [
+                                {
+                                    id: 1,
+                                    soRobux: "120",
+                                    rate: "120 / 4.78$",
+                                    thanhTien: "4.78$",
+                                    baoHanh: "10 Phút",
+                                    action: '<button class="btn  btn-sm btn-success  js-account-buy" data-action="/getacc" data-id="1"> <i class="fas fa-shopping-cart"></i>Mua</button>'
+                                },
+                                {
+                                    id: 2,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="2"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 3,
+                                    soRobux: "100",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="3"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 4,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="4"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 5,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="5"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 6,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="6"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 7,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="7"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 8,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="8"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 9,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="9"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                                {
+                                    id: 10,
+                                    soRobux: "105",
+                                    rate: "105 / 4.18$",
+                                    thanhTien: "4.18$",
+                                    baoHanh: "5 phút",
+                                    action: '<button class="btn  btn-sm btn-primary  js-account-buy" data-action="/getacc" data-id="10"> <i class="fas fa-shopping-cart"></i>Đặt hàng</button>'
+                                },
+                            ];
+                            erTable_dt_gamepass = $("#dt_gamepass").DataTable({
+                                processing: true,
+                                serverSide: false, // Không cần server-side khi sử dụng dữ liệu giả
+                                searchDelay: 500,
+                                autoWidth: false,
+                                searching: true,
+                                order: [[0, "desc"]],
+                                lengthMenu: [10, 25, 50, 75, 100],
+                                data: fakeData,
+                                columns: [
+                                    { data: 'id', title: '#' },
+                                    { data: 'soRobux', title: 'ROBUX' },
+                                    { data: 'rate', title: 'RATE' },
+                                    { data: 'thanhTien', title: 'GIÁ' },
+                                    { data: 'baoHanh', title: 'BẢO HÀNH' },
+                                    { data: 'action', title: 'THAO TÁC' }
+                                ]
+                            });
+                        });
+                        var BaseCompAccount = function() {
+                            var n = function() {
+                                jQuery(document).on("click", ".js-account-buy", function() {
+                                    var n = jQuery(this);
+                                    swal({
+                                        title: "Xác nhận mua tài khoản #" + n.data("id"),
+                                        text: 'Sau khi mua xong có thể xem thông tin đăng nhập tại mục "Tài khoản đã mua", chắc chắn mua chứ?',
+                                        icon: "warning",
+                                        dangerMode: !0,
+                                        closeOnCancel: true,
                                     <script type="text/javascript" defer="defer">
                                         $(function () {
                                             // Dữ liệu giả
@@ -1421,6 +1582,46 @@ $('.buuu').click(function(){
 
                                                         //     }
 
+                                        // }).fail(function(n, t, e) {
+                                        //     swal("Oops!", n.msg,"error")
+                                        // })
+                                        // }
+                                    })
+                                })
+                            };
+                            return {
+                                init: function() {
+                                    n()
+                                }
+                            }
+                        }();
+                        jQuery(function() {
+                            BaseCompAccount.init()
+                        });
+                        function search() {
+                            var searchValue = $("#acc_name").val();
+                            $.fn.dataTable.ext.search = [];
+                            $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
+                                var rateColumn = data[2];
+                                var numberMatch = rateColumn.match(/^\d+/);
+
+                                if (numberMatch) {
+                                    var rateValue = numberMatch[0];
+                                    return rateValue == searchValue;
+                                }
+                                return false;
+                            });
+                            erTable_dt_gamepass.draw();
+                            }
+                                $(document).ready(function(){
+                                    $('.buuu').click(function(){
+                                        var rate = $(this).data('rate');
+                                        $('input[name="search_acc"]').val(rate);
+                                        search();
+
+                                    });
+                                });
+                    </script>
                                                         // }).fail(function(n, t, e) {
                                                         //     swal("Oops!", n.msg,"error")
                                                         // })
