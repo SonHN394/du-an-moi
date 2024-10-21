@@ -878,12 +878,12 @@ th {
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between bg-transparent">
-                        <h4 class="mb-sm-0">Trang Chủ</h4>
+                        <h4 class="mb-sm-0">Home</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Sellrobux.com</a></li>
-                                <li class="breadcrumb-item active">Trang Chủ</li>
+                                <li class="breadcrumb-item active">Home</li>
                             </ol>
                         </div>
 
@@ -1235,10 +1235,30 @@ $('.buuu').click(function(){
 <div class="col-md-12">
 <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Danh sách đơn</h5>
+                    <h5 class="card-title mb-0">List of accounts</h5>
                 </div>
                 <div class="card-body">
-
+                    <br />
+                    <div class="count-circle">
+                    <button class="btn btn-dark buuu" data-rate="120">
+                    Rate 120    </button>
+                    <span class="badge"> 1</span>
+                    </div>
+                    <div class="count-circle">
+                    <button class="btn btn-primary buuu" data-rate="105">
+                    Rate 105    </button>
+                    <span class="badge"> 1</span>
+                    </div>
+                    <div class="count-circle">
+                    <button class="btn btn-secondary buuu" data-rate="102">
+                    Rate 102    </button>
+                    <span class="badge"> 1</span>
+                    </div>
+                    <div class="count-circle">
+                    <button class="btn btn-danger buuu" data-rate="100">
+                    Rate 100    </button>
+                    <span class="badge"> 1</span>
+                    </div>
 
                     <div class="table-responsive">
                         <div id="dt_gamepass_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
@@ -1246,6 +1266,7 @@ $('.buuu').click(function(){
                             </table>
                         </div>
                     </div>
+                    <input type="hidden" id="acc_name" name="search_acc">
 
                     <script type="text/javascript" defer="defer">
                         $(function(){
@@ -1346,7 +1367,7 @@ $('.buuu').click(function(){
                                     { data: 'soRobux', title: 'ROBUX' },
                                     { data: 'rate', title: 'RATE' },
                                     { data: 'thanhTien', title: 'GIÁ' },
-                                    { data: 'baoHanh', title: 'ẢO HÀNH' },
+                                    { data: 'baoHanh', title: 'BẢO HÀNH' },
                                     { data: 'action', title: 'THAO TÁC' }
                                 ]
                             });
@@ -1415,6 +1436,29 @@ $('.buuu').click(function(){
                         jQuery(function() {
                             BaseCompAccount.init()
                         });
+                        function search() {
+                            var searchValue = $("#acc_name").val();
+                            $.fn.dataTable.ext.search = [];
+                            $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
+                                var rateColumn = data[2];
+                                var numberMatch = rateColumn.match(/^\d+/);
+
+                                if (numberMatch) {
+                                    var rateValue = numberMatch[0];
+                                    return rateValue == searchValue;
+                                }
+                                return false;
+                            });
+                            erTable_dt_gamepass.draw();
+                            }
+                                $(document).ready(function(){
+                                    $('.buuu').click(function(){
+                                        var rate = $(this).data('rate');
+                                        $('input[name="search_acc"]').val(rate);
+                                        search();
+
+                                    });
+                                });
                     </script>
 
       </div>
