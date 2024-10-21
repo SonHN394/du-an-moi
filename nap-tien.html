@@ -850,7 +850,7 @@
                 width: 230px;
                 cursor: pointer;
                 margin-right: 10px;
-                background: white;
+                background: transparent;
                 object-fit: contain;
             }
 
@@ -875,11 +875,11 @@
                 <h4 class="text-nap-head mb-4 text-white pt-3 mt-5">Choose Your Payment Method</h4>
                     <!-- Payment Methods Head -->
                     <div class="d-flex">
-                            <div class="method-card card-nap-tien method-card-selected" data-method="1">
+                            <div style="background: white;"  class="method-card card-nap-tien method-card-selected" data-method="1">
                                 <img src="https://cashblox.gg/_next/image?url=%2Fpayments%2Fpaypal.png&w=256&q=75" class="w-100" alt="">
                             </div>
                        
-                            <div style="background: transparent;" class="method-card card-nap-tien" data-method="2">
+                            <div class="method-card card-nap-tien" data-method="2">
                                <img src="https://cashblox.gg/_next/image?url=%2Fpayments%2Flitecoin.png&w=256&q=75" class="w-100" alt="">
                             </div>
                        
@@ -1019,7 +1019,7 @@
             
                         <div class="method-body" id="method-4" style="display:none;">
                             <form>
-                                <div class="mb-3 row">
+                                <div class="mb-3 row mt-2">
                                     <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                                         <h6><strong>Cost:</strong></h6>
                                         <h5>2,000 R$</h5>
