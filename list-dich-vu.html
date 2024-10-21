@@ -1013,7 +1013,7 @@ color: green;
 
 </table>
 </div>
-<input type="hidden" id="acc_name" name="abc">
+<input type="hidden" id="acc_name" name="search_service">
 
 <script type="text/javascript" defer="defer">
 $(function() {
@@ -1060,14 +1060,14 @@ $.fn.dataTable.ext.search.push(function(settings, data, dataIndex) {
 });
 erTable_dt_authors.draw();
 }
-$(document).ready(function(){
-$('.buuu').click(function(){
-    var rate = $(this).data('rate');
-    $('input[name="abc"]').val(rate);
-    search();
+    $(document).ready(function(){
+        $('.buuu').click(function(){
+            var rate = $(this).data('rate');
+            $('input[name="search_service"]').val(rate);
+            search();
 
-});
-});
+        });
+    });
 </script>
 
 
