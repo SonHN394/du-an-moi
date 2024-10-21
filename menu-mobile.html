@@ -1877,6 +1877,12 @@ $('.buuu').click(function(){
                 }
             })
         });
+        // Lấy chiều cao của body
+        let bodyHeight = document.body.offsetHeight;
+
+        // Áp dụng tính toán chiều cao
+        document.getElementById('your-element-id').style.height = `calc(${bodyHeight}px - 60px)`;
+
 
 
     </script>

@@ -580,17 +580,17 @@
                     <li>
                         <a href="#" class="btn btn-header bg-color-theme">
                             <img class="align-items-center" width="15" src="shopping-cart-svgrepo-com.svg" alt="">
-                            <span>Buy Robux</span>
+                            <span class="text-dark">Buy Robux</span>
                         </a>
                     </li>
                     <li>
                         <a href="#" class="btn btn-header bg-color-theme">
                             <img class="align-items-center" width="15" src="credit-card-svgrepo-com.svg" alt="">
-                            <span>Withdraw</span>
+                            <span class="text-dark">Withdraw</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="btn btn-header bg-color-theme btn-login">
+                        <a href="#" class="btn btn-header bg-color-theme btn-login text-dark">
                             Log in
                         </a>
                     </li>
@@ -1816,7 +1816,7 @@ $('.buuu').click(function(){
                     $('.footer').css('margin-left', '220px');
                     $(this).find('svg').replaceWith(originalSVG);
                     $(this).css('margin-bottom', '10px');
-                    $('.menu-bar-menu-drop').css('display', 'block').removeClass('col-12 ps-4');
+                    $('.menu-bar-menu-drop').css('display', 'none').removeClass('col-12 ps-4');
                     $('.menu-bar-menu-drop').addClass('col-12 ps-4');
                     $('.menu-bar-header').css('width', '220px'); // Mở rộng ra
                     $('.menu-bar-item-drop').css('display', 'block');
@@ -1912,6 +1912,13 @@ $('.buuu').click(function(){
                   
                 }
             })
+
+// Áp dụng tính toán chiều cao
+            var bodyHeight = $('body').height();
+
+            // Áp dụng tính toán chiều cao cho phần tử
+            $('.menu-chat-header').css('height', 'calc(' + (bodyHeight -3) + 'px )');
+            $('.menu-bar-header').css('height', 'calc(' + (bodyHeight -2) + 'px)');
         });
 
 
